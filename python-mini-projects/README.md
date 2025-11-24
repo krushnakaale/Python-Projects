@@ -3,9 +3,9 @@
 This repository contains **five beginner-friendly Python mini projects**, designed to help new learners practice core programming skills.
 Each project is simple, runs in the **terminal**, uses **only Python’s built-in libraries**, and teaches important concepts like loops, conditions, functions, classes, and file handling.
 
----
+--
 
-## 📂 **Project Structure**
+## **Project Structure**
 
 ```
 python-mini-projects/
@@ -17,9 +17,9 @@ python-mini-projects/
 │── README.md
 ```
 
----
+--
 
-## 🚀 **Included Projects**
+## **Included Projects**
 
 ### **1. Simple Calculator**
 
@@ -34,7 +34,7 @@ A basic command-line calculator that supports:
 
 A great starting point to practice functions and basic logic.
 
----
+--
 
 ### **2. Number Guessing Game**
 
@@ -47,7 +47,7 @@ A fun guessing game where:
 
 Teaches loops, conditions, random numbers, and error handling.
 
----
+--
 
 ### **3. Rock–Paper–Scissors**
 
@@ -60,7 +60,7 @@ Play against the computer:
 
 Excellent for practicing comparisons and user interaction.
 
----
+--
 
 ### **4. Password Generator**
 
@@ -74,7 +74,7 @@ A customizable password generator that lets you choose:
 It also shows the estimated strength of the generated password.
 Great for practicing string manipulation and randomness.
 
----
+--
 
 ### **5. To-Do List Manager**
 
@@ -89,9 +89,9 @@ A terminal-based productivity tool with:
 
 This project teaches file handling, JSON, classes, and CRUD operations.
 
----
+--
 
-## 🛠 **Technologies Used**
+## **Technologies Used**
 
 - **Python 3.x**
 - Built-in modules only:
@@ -104,9 +104,9 @@ This project teaches file handling, JSON, classes, and CRUD operations.
 
 No external packages required.
 
----
+--
 
-## ▶️ **How to Run the Projects**
+## **How to Run the Projects**
 
 1. Install Python 3
 2. Download or clone this folder
@@ -121,9 +121,9 @@ python rockPaperScissor.py
 python toDo.py
 ```
 
----
+--
 
-## 🎯 **Skills You Will Learn**
+## **Skills You Will Learn**
 
 - Writing and organizing functions
 - Using loops and conditionals
@@ -135,30 +135,4 @@ python toDo.py
 
 Perfect practice for moving from beginner → intermediate Python.
 
----
-
-## 🌱 **Future Improvements (Optional Enhancements)**
-
-You can extend these projects by adding:
-
-- Tkinter GUI versions
-- Dark/light mode themes for CLI
-- Save/load game scores
-- Better error handling
-- More features in the To-Do app (deadlines, categories, reminders)
-
----
-
-## ✅ **Conclusion**
-
-This mini-project pack is a great starting point for Python learners.
-Each project focuses on a fundamental concept and helps you build confidence by writing real, working programs.
-
-If you want help with:
-
-✔ A combined launcher menu for all 5 projects
-✔ GUI versions of any project
-✔ Uploading this repository to GitHub
-✔ Improving code structure
-
-Just tell me!
+--
