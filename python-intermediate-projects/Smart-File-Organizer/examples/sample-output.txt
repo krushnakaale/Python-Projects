@@ -1,0 +1,11 @@
+$ python main.py organize demo --dry-run
+PREVIEW (no files changed)
+  photo.jpg -> Images/photo.jpg
+  report.pdf -> Documents/report.pdf
+  script.py -> Code/script.py
+  song.mp3 -> Audio/song.mp3
+Total: 4 file(s)
+
+$ python main.py duplicates demo
+Group 1: copy.txt, original.txt
+Duplicate groups: 1 (nothing deleted)
