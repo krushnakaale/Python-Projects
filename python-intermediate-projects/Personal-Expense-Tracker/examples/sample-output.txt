@@ -1,0 +1,6 @@
+Month: 2026-11
+Income: INR 5000.00
+Expenses: INR 250.00
+Balance: INR 4750.00
+Food: INR 250.00
+Budget remaining: INR 1750.00
