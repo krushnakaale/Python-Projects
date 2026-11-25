@@ -46,12 +46,19 @@ Python-Projects/
 │   │   ├── main.py                      # Main entry point
 │   │   └── README.md                    # Detailed documentation & safety guide
 │   │
-│   └── Personal-Expense-Tracker/        # Income, expense & budget manager CLI in INR
-│       ├── expense_tracker/             # CLI & core logic with Decimal precision
+│   ├── Personal-Expense-Tracker/        # Income, expense & budget manager CLI in INR
+│   │   ├── expense_tracker/             # CLI & core logic with Decimal precision
+│   │   ├── tests/                       # Automated unit test suite
+│   │   ├── examples/                    # Sample outputs & CSV reports
+│   │   ├── main.py                      # Main entry point
+│   │   └── README.md                    # Documentation & CLI usage guide
+│   │
+│   └── Secure-Password-Vault/           # Encrypted local password manager with Scrypt & Fernet
+│       ├── password_vault/              # Encryption engine & interactive CLI
 │       ├── tests/                       # Automated unit test suite
-│       ├── examples/                    # Sample outputs & CSV reports
+│       ├── examples/                    # Sample outputs
 │       ├── main.py                      # Main entry point
-│       └── README.md                    # Documentation & CLI usage guide
+│       └── README.md                    # Security design & command reference
 │
 └── README.md                            # Main repository guide (this file)
 ```
@@ -80,6 +87,7 @@ Python-Projects/
 |---|---|---|---|
 | 1 | **Smart File Organizer** | Safe file categorization, duplicate detection & undo journal | `argparse`, `pathlib`, SHA-256, transaction journaling |
 | 2 | **Personal Expense Tracker** | Income, expense & budget management CLI with CSV export | `decimal.Decimal`, financial math, JSON store, `csv` |
+| 3 | **Secure Password Vault** | Encrypted credentials vault with Scrypt & Fernet | `cryptography`, Scrypt KDF, Fernet AES, `getpass` |
 
 #### 📁 **Smart File Organizer** (`Smart-File-Organizer/`)
 A cross-platform CLI tool that cleans up cluttered directories safely and intelligently.
@@ -98,6 +106,15 @@ A standard-library CLI application for tracking income, expenses, and monthly bu
 - **CSV Export:** Easily export monthly transaction statements to CSV spreadsheets.
 - **Persistence:** Local JSON data store with full CRUD capabilities (Add, List, Update, Delete).
 - **Unit Tested:** Automated unit test suite with temporary test storage isolation.
+
+#### 📁 **Secure Password Vault** (`Secure-Password-Vault/`)
+An encrypted local password vault demonstrating authenticated encryption and secure key derivation.
+- **Strong Key Derivation:** Scrypt KDF derives a 32-byte cryptographic key using master password + 16-byte random salt.
+- **Authenticated Encryption:** Fernet (AES-128 in CBC mode + HMAC-SHA256) ensures vault confidentiality and integrity.
+- **Masked Password Prompts:** Uses `getpass` for hidden terminal input to prevent shoulder-surfing.
+- **Cryptographic Password Generator:** Generates cryptographically secure, high-entropy passwords with custom length.
+- **Atomic Storage:** Atomic file replacements prevent data corruption during unexpected interruptions.
+- **Unit Tested:** Complete test suite covering encryption roundtrips, bad password handling, and entry lifecycle.
 
 ---
 
@@ -162,6 +179,27 @@ python main.py summary --month 2026-11
 
 # Export monthly report to CSV
 python main.py export report.csv --month 2026-11
+
+# Run automated tests
+python -m unittest discover -s tests -v
+```
+
+#### 3. Secure Password Vault
+```bash
+cd python-intermediate-projects/Secure-Password-Vault
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Initialize a new vault with master password
+python main.py init
+
+# Generate a strong 32-character password
+python main.py generate --length 32
+
+# Add an entry and list entries
+python main.py add github
+python main.py list
 
 # Run automated tests
 python -m unittest discover -s tests -v

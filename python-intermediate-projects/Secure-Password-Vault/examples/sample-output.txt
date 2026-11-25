@@ -1,0 +1,8 @@
+Master password: [hidden]
+Confirm master password: [hidden]
+Vault created.
+
+Master password: [hidden]
+Username: demo-user
+Entry password: [hidden]
+Entry saved.
