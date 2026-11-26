@@ -53,12 +53,19 @@ Python-Projects/
 │   │   ├── main.py                      # Main entry point
 │   │   └── README.md                    # Documentation & CLI usage guide
 │   │
-│   └── Secure-Password-Vault/           # Encrypted local password manager with Scrypt & Fernet
-│       ├── password_vault/              # Encryption engine & interactive CLI
-│       ├── tests/                       # Automated unit test suite
+│   ├── Secure-Password-Vault/           # Encrypted local password manager with Scrypt & Fernet
+│   │   ├── password_vault/              # Encryption engine & interactive CLI
+│   │   ├── tests/                       # Automated unit test suite
+│   │   ├── examples/                    # Sample outputs
+│   │   ├── main.py                      # Main entry point
+│   │   └── README.md                    # Security design & command reference
+│   │
+│   └── Website-Status-Monitor/          # HTTP(S) availability & latency monitor with CSV export
+│       ├── website_monitor/             # Sequential monitoring engine & CLI
+│       ├── tests/                       # Automated unit test suite with mock endpoints
 │       ├── examples/                    # Sample outputs
 │       ├── main.py                      # Main entry point
-│       └── README.md                    # Security design & command reference
+│       └── README.md                    # Monitoring guide & safety reference
 │
 └── README.md                            # Main repository guide (this file)
 ```
@@ -88,6 +95,7 @@ Python-Projects/
 | 1 | **Smart File Organizer** | Safe file categorization, duplicate detection & undo journal | `argparse`, `pathlib`, SHA-256, transaction journaling |
 | 2 | **Personal Expense Tracker** | Income, expense & budget management CLI with CSV export | `decimal.Decimal`, financial math, JSON store, `csv` |
 | 3 | **Secure Password Vault** | Encrypted credentials vault with Scrypt & Fernet | `cryptography`, Scrypt KDF, Fernet AES, `getpass` |
+| 4 | **Website Status Monitor** | Sequential HTTP(S) health checker & uptime tracker | `urllib`, HTTP status, JSONL log, CSV report |
 
 #### 📁 **Smart File Organizer** (`Smart-File-Organizer/`)
 A cross-platform CLI tool that cleans up cluttered directories safely and intelligently.
@@ -115,6 +123,15 @@ An encrypted local password vault demonstrating authenticated encryption and sec
 - **Cryptographic Password Generator:** Generates cryptographically secure, high-entropy passwords with custom length.
 - **Atomic Storage:** Atomic file replacements prevent data corruption during unexpected interruptions.
 - **Unit Tested:** Complete test suite covering encryption roundtrips, bad password handling, and entry lifecycle.
+
+#### 📁 **Website Status Monitor** (`Website-Status-Monitor/`)
+A standard-library CLI uptime monitor for checking availability and response times of HTTP(S) endpoints.
+- **Health Checks & Latency:** Measures HTTP status codes and header response times in milliseconds (`ms`).
+- **Sequential Monitoring:** Configurable periodic polling with custom intervals (`--interval`) and sample counts (`--count`).
+- **Audit History:** Records timestamped checks locally in structured JSON Lines format (`data/history.jsonl`).
+- **Uptime Analytics:** Computes overall availability percentages and total sample statistics.
+- **CSV Reports:** Exports historical monitoring data into structured CSV spreadsheets for reporting.
+- **Unit Tested:** Unit test suite with mock network responses ensuring reliability without live endpoints.
 
 ---
 
@@ -200,6 +217,27 @@ python main.py generate --length 32
 # Add an entry and list entries
 python main.py add github
 python main.py list
+
+# Run automated tests
+python -m unittest discover -s tests -v
+```
+
+#### 4. Website Status Monitor
+```bash
+cd python-intermediate-projects/Website-Status-Monitor
+
+# Single health check for a website
+python main.py check https://example.com
+
+# Periodic monitoring (every 60s, 5 samples)
+python main.py monitor https://example.com --interval 60 --count 5
+
+# View check history and uptime summary
+python main.py history
+python main.py summary
+
+# Export results to CSV
+python main.py export report.csv
 
 # Run automated tests
 python -m unittest discover -s tests -v

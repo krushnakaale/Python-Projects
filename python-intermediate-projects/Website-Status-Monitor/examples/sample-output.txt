@@ -1,0 +1,3 @@
+Illustrative output (not a live measurement):
+https://example.com | UP | HTTP 200 | 125.40 ms
+https://example.com: 100.00% successful checks (1 samples)
