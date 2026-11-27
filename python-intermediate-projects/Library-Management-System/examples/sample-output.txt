@@ -1,0 +1,8 @@
+Success. ID: 1
+Success. ID: 1
+Success. ID: 1
+id: 1 | title: Python Basics | author: Demo Author | copies: 2 | available: 1
+titles: 1
+copies: 2
+members: 1
+active_loans: 1

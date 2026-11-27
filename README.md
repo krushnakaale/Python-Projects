@@ -60,12 +60,19 @@ Python-Projects/
 │   │   ├── main.py                      # Main entry point
 │   │   └── README.md                    # Security design & command reference
 │   │
-│   └── Website-Status-Monitor/          # HTTP(S) availability & latency monitor with CSV export
-│       ├── website_monitor/             # Sequential monitoring engine & CLI
-│       ├── tests/                       # Automated unit test suite with mock endpoints
+│   ├── Website-Status-Monitor/          # HTTP(S) availability & latency monitor with CSV export
+│   │   ├── website_monitor/             # Sequential monitoring engine & CLI
+│   │   ├── tests/                       # Automated unit test suite with mock endpoints
+│   │   ├── examples/                    # Sample outputs
+│   │   ├── main.py                      # Main entry point
+│   │   └── README.md                    # Monitoring guide & safety reference
+│   │
+│   └── Library-Management-System/       # Relational SQLite library catalog, member & loan manager
+│       ├── library_system/              # Core Library engine & CLI interface
+│       ├── tests/                       # Automated isolated in-memory unit tests
 │       ├── examples/                    # Sample outputs
 │       ├── main.py                      # Main entry point
-│       └── README.md                    # Monitoring guide & safety reference
+│       └── README.md                    # Command guide & schema documentation
 │
 └── README.md                            # Main repository guide (this file)
 ```
@@ -96,6 +103,7 @@ Python-Projects/
 | 2 | **Personal Expense Tracker** | Income, expense & budget management CLI with CSV export | `decimal.Decimal`, financial math, JSON store, `csv` |
 | 3 | **Secure Password Vault** | Encrypted credentials vault with Scrypt & Fernet | `cryptography`, Scrypt KDF, Fernet AES, `getpass` |
 | 4 | **Website Status Monitor** | Sequential HTTP(S) health checker & uptime tracker | `urllib`, HTTP status, JSONL log, CSV report |
+| 5 | **[Library Management System](python-intermediate-projects/Library-Management-System/README.md)** | Relational book, member & loan tracking with SQLite | `sqlite3`, parameterized SQL, CRUD, relational schema |
 
 #### 📁 **Smart File Organizer** (`Smart-File-Organizer/`)
 A cross-platform CLI tool that cleans up cluttered directories safely and intelligently.
@@ -132,6 +140,15 @@ A standard-library CLI uptime monitor for checking availability and response tim
 - **Uptime Analytics:** Computes overall availability percentages and total sample statistics.
 - **CSV Reports:** Exports historical monitoring data into structured CSV spreadsheets for reporting.
 - **Unit Tested:** Unit test suite with mock network responses ensuring reliability without live endpoints.
+
+#### 📁 **Library Management System** (`Library-Management-System/`)
+A standard-library CLI application backed by relational SQLite storage for complete book inventory, member directory, and loan lifecycle management.
+- **Relational SQLite Database:** Uses parameterized queries, foreign keys, and indexes for safe and structured data persistence.
+- **Book & Member Lifecycle:** Full CRUD support to add, update, search, and delete books and registered members.
+- **Circulation & Loan Tracking:** Issues books with custom loan durations, tracks active loans, and manages returns.
+- **History Protection:** Prevents deleting books or members that are linked to loan history to preserve audit integrity.
+- **Overdue Reports & Statistics:** Instantly lists overdue borrowings and summarizes library collection statistics.
+- **Unit Tested:** Fast in-memory unit test suite covering inventory availability, constraints, and error scenarios.
 
 ---
 
@@ -238,6 +255,30 @@ python main.py summary
 
 # Export results to CSV
 python main.py export report.csv
+
+# Run automated tests
+python -m unittest discover -s tests -v
+```
+
+#### 5. Library Management System
+```bash
+cd python-intermediate-projects/Library-Management-System
+
+# Add a book and a member
+python main.py add-book "Fluent Python" "Luciano Ramalho" 3
+python main.py add-member "Krushna Kale"
+
+# Search catalog and issue a book (Book ID 1, Member ID 1, 14 days)
+python main.py books --search Python
+python main.py issue 1 1 --days 14
+
+# View active loans, overdue items, and library stats
+python main.py loans
+python main.py overdue
+python main.py stats
+
+# Return a book (Loan ID 1)
+python main.py return 1
 
 # Run automated tests
 python -m unittest discover -s tests -v
