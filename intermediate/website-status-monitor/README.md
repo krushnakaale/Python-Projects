@@ -1,9 +1,9 @@
 # Website Status Monitor
 
-Project 04 — Python Intermediate Projects. A sequential CLI monitor for authorized HTTP(S) websites.
+A sequential CLI monitor for authorized HTTP(S) websites.
 
 ## Setup
-Extract the archive and open a terminal in this directory. Python 3.10+ is required; no external dependencies.
+From the repository root, open `intermediate/website-status-monitor`. Python 3.10+ is required; no external dependencies.
 
 Windows: `py main.py --help`
 

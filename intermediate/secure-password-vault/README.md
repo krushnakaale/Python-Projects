@@ -4,6 +4,8 @@ An intermediate Python CLI project demonstrating authenticated encryption, passw
 
 ## Setup
 
+From the repository root, open `intermediate/secure-password-vault`.
+
 Windows PowerShell:
 
 ```powershell

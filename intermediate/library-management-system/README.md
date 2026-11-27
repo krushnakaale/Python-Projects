@@ -2,7 +2,7 @@
 A Python 3.10+ CLI application with SQLite persistence, book and member CRUD, loan tracking, overdue reports and statistics.
 
 ## Getting started
-Extract the archive and open a terminal in `05-Library-Management-System`. On Windows use `py main.py --help`; on Kali Linux use `python3 main.py --help`. No dependencies are required. Replace `python` below with `py` or `python3` as appropriate.
+From the repository root, open `intermediate/library-management-system`. On Windows use `py main.py --help`; on Kali Linux use `python3 main.py --help`. No dependencies are required. Replace `python` below with `py` or `python3` as appropriate.
 
 ```sh
 python main.py add-book "Python Basics" "Demo Author" 2

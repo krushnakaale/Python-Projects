@@ -1,317 +1,152 @@
-# 🐍 Python Projects Repository
+# Python Projects
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python Logo" width="80" height="80"/>
-</p>
+Ten Python command-line projects, from single-file exercises to modular applications with automated tests. This repository is the final collection.
 
-<p align="center">
-  <em>A curated collection of practical Python projects — from beginner-friendly terminal applications to modular, production-ready CLI tools.</em>
-</p>
+## Project index
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python Version"/>
-  <img src="https://img.shields.io/github/license/krushnakaale/Python-Projects?style=for-the-badge&color=green" alt="License"/>
-  <img src="https://img.shields.io/github/repo-size/krushnakaale/Python-Projects?style=for-the-badge&color=orange" alt="Repo Size"/>
-  <img src="https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg?style=for-the-badge" alt="Maintained"/>
-</p>
+| Beginner projects | Intermediate projects |
+| --- | --- |
+| [Simple Calculator](#simple-calculator) | [Smart File Organizer](#smart-file-organizer) |
+| [Number Guessing Game](#number-guessing-game) | [Personal Expense Tracker](#personal-expense-tracker) |
+| [Rock Paper Scissors](#rock-paper-scissors) | [Secure Password Vault](#secure-password-vault) |
+| [Password Generator](#password-generator) | [Website Status Monitor](#website-status-monitor) |
+| [To-Do List Manager](#to-do-list-manager) | [Library Management System](#library-management-system) |
 
----
-
-## 📌 Repository Overview
-
-Welcome to the **Python-Projects** repository! This repository is organized by skill level to showcase clean code practices, algorithmic thinking, and modular software architecture in Python. 
-
-Whether you are looking for simple terminal exercises or intermediate-level modular applications with automated unit tests, this repository has hands-on examples built primarily using Python's standard library.
-
----
-
-## 📂 Repository Structure
+## Repository structure
 
 ```text
 Python-Projects/
-│
-├── python-mini-projects/                 # 🚀 Beginner-friendly terminal projects
-│   ├── calculator.py                    # Multi-operation CLI calculator
-│   ├── numGuessGame.py                  # Number guessing game with hints
-│   ├── passGenerator.py                 # Customizable secure password generator
-│   ├── rockPaperScissior.py             # Best-of-5 Rock Paper Scissors game
-│   ├── toDo.py                          # Terminal To-Do list with JSON persistence
-│   └── README.md                        # Documentation for mini projects
-│
-├── python-intermediate-projects/         # ⚡ Modular, robust intermediate projects
-│   ├── Smart-File-Organizer/            # Cross-platform CLI file organizer
-│   │   ├── smart_file_organizer/        # Core business logic & CLI module
-│   │   ├── tests/                       # Automated unit test suite
-│   │   ├── examples/                    # Sample output demonstrations
-│   │   ├── main.py                      # Main entry point
-│   │   └── README.md                    # Detailed documentation & safety guide
-│   │
-│   ├── Personal-Expense-Tracker/        # Income, expense & budget manager CLI in INR
-│   │   ├── expense_tracker/             # CLI & core logic with Decimal precision
-│   │   ├── tests/                       # Automated unit test suite
-│   │   ├── examples/                    # Sample outputs & CSV reports
-│   │   ├── main.py                      # Main entry point
-│   │   └── README.md                    # Documentation & CLI usage guide
-│   │
-│   ├── Secure-Password-Vault/           # Encrypted local password manager with Scrypt & Fernet
-│   │   ├── password_vault/              # Encryption engine & interactive CLI
-│   │   ├── tests/                       # Automated unit test suite
-│   │   ├── examples/                    # Sample outputs
-│   │   ├── main.py                      # Main entry point
-│   │   └── README.md                    # Security design & command reference
-│   │
-│   ├── Website-Status-Monitor/          # HTTP(S) availability & latency monitor with CSV export
-│   │   ├── website_monitor/             # Sequential monitoring engine & CLI
-│   │   ├── tests/                       # Automated unit test suite with mock endpoints
-│   │   ├── examples/                    # Sample outputs
-│   │   ├── main.py                      # Main entry point
-│   │   └── README.md                    # Monitoring guide & safety reference
-│   │
-│   └── Library-Management-System/       # Relational SQLite library catalog, member & loan manager
-│       ├── library_system/              # Core Library engine & CLI interface
-│       ├── tests/                       # Automated isolated in-memory unit tests
-│       ├── examples/                    # Sample outputs
-│       ├── main.py                      # Main entry point
-│       └── README.md                    # Command guide & schema documentation
-│
-└── README.md                            # Main repository guide (this file)
+|-- README.md
+|-- assets/previews/
+|   |-- beginner/
+|   `-- intermediate/
+|-- beginner/
+|   |-- README.md
+|   |-- calculator.py
+|   |-- number_guessing_game.py
+|   |-- rock_paper_scissors.py
+|   |-- password_generator.py
+|   `-- todo_list.py
+`-- intermediate/
+    |-- library-management-system/
+    |-- personal-expense-tracker/
+    |-- secure-password-vault/
+    |-- smart-file-organizer/
+    `-- website-status-monitor/
 ```
 
----
+Each intermediate folder contains a `main.py` entry point, a Python package, a project README, a dependency file, a sample terminal transcript and a `tests/` directory.
 
-## 🚀 Projects Showcase
+## Quick start
 
-### 1. Beginner Level: `python-mini-projects`
-> Focused on core programming foundations: loops, conditional logic, functions, OOP, and JSON file persistence using **zero external dependencies**.
+Use **Python 3.10 or later**. The vault requires `cryptography`. The other nine projects use the Python standard library.
 
-| # | Project | Description | Core Concepts |
-|---|---|---|---|
-| 1 | **Simple Calculator** | Continuous command-line calculator with input validation | Functions, arithmetic logic, loops |
-| 2 | **Number Guessing Game** | Interactive guessing game with scoring and hints | `random`, conditionals, state tracking |
-| 3 | **Rock-Paper-Scissors** | Play 5-round matches against computer AI | Random choices, comparison algorithms |
-| 4 | **Password Generator** | Generates strong passwords with customizable complexity | `string`, `random`, password strength evaluation |
-| 5 | **To-Do List Manager** | CRUD task manager with persistent JSON storage | File I/O, `json`, OOP, task lifecycle |
-
----
-
-### 2. Intermediate Level: `python-intermediate-projects`
-> Focused on software architecture, clean CLI design, SHA-256 data hashing, test automation, and state management.
-
-| # | Project | Description | Core Concepts |
-|---|---|---|---|
-| 1 | **Smart File Organizer** | Safe file categorization, duplicate detection & undo journal | `argparse`, `pathlib`, SHA-256, transaction journaling |
-| 2 | **Personal Expense Tracker** | Income, expense & budget management CLI with CSV export | `decimal.Decimal`, financial math, JSON store, `csv` |
-| 3 | **Secure Password Vault** | Encrypted credentials vault with Scrypt & Fernet | `cryptography`, Scrypt KDF, Fernet AES, `getpass` |
-| 4 | **Website Status Monitor** | Sequential HTTP(S) health checker & uptime tracker | `urllib`, HTTP status, JSONL log, CSV report |
-| 5 | **[Library Management System](python-intermediate-projects/Library-Management-System/README.md)** | Relational book, member & loan tracking with SQLite | `sqlite3`, parameterized SQL, CRUD, relational schema |
-
-#### 📁 **Smart File Organizer** (`Smart-File-Organizer/`)
-A cross-platform CLI tool that cleans up cluttered directories safely and intelligently.
-- **Categorization:** Automatically sorts files into `Images`, `Documents`, `Spreadsheets`, `Presentations`, `Videos`, `Audio`, `Archives`, `Code`, and `Others`.
-- **Duplicate Detection:** Computes **SHA-256** checksums (grouped by size) to find duplicate files without deleting anything automatically.
-- **Safety First (`--dry-run`):** Preview planned moves before touching files.
-- **Collision Protection:** Never overwrites existing destination files (appends `_1`, `_2`).
-- **Undo System:** Keeps an operation journal (`.sfo_state/`) to revert file movements anytime.
-- **Unit Tested:** Complete test coverage using Python's built-in `unittest` framework.
-
-#### 📁 **Personal Expense Tracker** (`Personal-Expense-Tracker/`)
-A standard-library CLI application for tracking income, expenses, and monthly budgets in INR.
-- **Accurate Financial Math:** Uses `decimal.Decimal` for exact monetary calculations without floating-point errors.
-- **Budget Tracking:** Set monthly limits and monitor spending thresholds with warnings.
-- **Monthly Summary:** Category-wise percentage breakdown of expenses and net balance calculation.
-- **CSV Export:** Easily export monthly transaction statements to CSV spreadsheets.
-- **Persistence:** Local JSON data store with full CRUD capabilities (Add, List, Update, Delete).
-- **Unit Tested:** Automated unit test suite with temporary test storage isolation.
-
-#### 📁 **Secure Password Vault** (`Secure-Password-Vault/`)
-An encrypted local password vault demonstrating authenticated encryption and secure key derivation.
-- **Strong Key Derivation:** Scrypt KDF derives a 32-byte cryptographic key using master password + 16-byte random salt.
-- **Authenticated Encryption:** Fernet (AES-128 in CBC mode + HMAC-SHA256) ensures vault confidentiality and integrity.
-- **Masked Password Prompts:** Uses `getpass` for hidden terminal input to prevent shoulder-surfing.
-- **Cryptographic Password Generator:** Generates cryptographically secure, high-entropy passwords with custom length.
-- **Atomic Storage:** Atomic file replacements prevent data corruption during unexpected interruptions.
-- **Unit Tested:** Complete test suite covering encryption roundtrips, bad password handling, and entry lifecycle.
-
-#### 📁 **Website Status Monitor** (`Website-Status-Monitor/`)
-A standard-library CLI uptime monitor for checking availability and response times of HTTP(S) endpoints.
-- **Health Checks & Latency:** Measures HTTP status codes and header response times in milliseconds (`ms`).
-- **Sequential Monitoring:** Configurable periodic polling with custom intervals (`--interval`) and sample counts (`--count`).
-- **Audit History:** Records timestamped checks locally in structured JSON Lines format (`data/history.jsonl`).
-- **Uptime Analytics:** Computes overall availability percentages and total sample statistics.
-- **CSV Reports:** Exports historical monitoring data into structured CSV spreadsheets for reporting.
-- **Unit Tested:** Unit test suite with mock network responses ensuring reliability without live endpoints.
-
-#### 📁 **Library Management System** (`Library-Management-System/`)
-A standard-library CLI application backed by relational SQLite storage for complete book inventory, member directory, and loan lifecycle management.
-- **Relational SQLite Database:** Uses parameterized queries, foreign keys, and indexes for safe and structured data persistence.
-- **Book & Member Lifecycle:** Full CRUD support to add, update, search, and delete books and registered members.
-- **Circulation & Loan Tracking:** Issues books with custom loan durations, tracks active loans, and manages returns.
-- **History Protection:** Prevents deleting books or members that are linked to loan history to preserve audit integrity.
-- **Overdue Reports & Statistics:** Instantly lists overdue borrowings and summarizes library collection statistics.
-- **Unit Tested:** Fast in-memory unit test suite covering inventory availability, constraints, and error scenarios.
-
----
-
-## 🛠️ Getting Started
-
-### Prerequisites
-- Python **3.10** or higher installed. Check version:
-  ```bash
-  python --version   # Windows / Linux / macOS
-  ```
-
-### Clone the Repository
-```bash
+```sh
 git clone https://github.com/krushnakaale/Python-Projects.git
 cd Python-Projects
+python beginner/calculator.py
 ```
 
----
+To explore a modular application or run its tests, open its project directory. For example, from the repository root:
 
-## 💻 Running the Projects
-
-### Running Mini Projects
-Navigate to `python-mini-projects` or execute directly:
-```bash
-# Example: Run the To-Do List application
-python python-mini-projects/toDo.py
-
-# Example: Run the Password Generator
-python python-mini-projects/passGenerator.py
-```
-
-### Running Intermediate Projects
-
-#### 1. Smart File Organizer
-```bash
-cd python-intermediate-projects/Smart-File-Organizer
-
-# View help and available subcommands
+```sh
+cd intermediate/library-management-system
 python main.py --help
-
-# Preview organizing a folder (Dry Run - no files changed)
-python main.py organize "C:\Users\<YourUser>\Downloads" --dry-run
-
-# Run duplicate detection recursively
-python main.py duplicates "C:\Users\<YourUser>\Downloads" --recursive
-
-# Run automated tests
 python -m unittest discover -s tests -v
 ```
 
-#### 2. Personal Expense Tracker
-```bash
-cd python-intermediate-projects/Personal-Expense-Tracker
+For the vault, follow the setup instructions in its project guide before running commands or tests.
 
-# Add income or expense
-python main.py add income 5000 Salary --date 2026-11-01
-python main.py add expense 250 Food --date 2026-11-02 --note "Lunch"
+## Beginner projects
 
-# Set a monthly budget and view monthly summary
-python main.py budget 2026-11 2000
-python main.py summary --month 2026-11
+### Simple Calculator
 
-# Export monthly report to CSV
-python main.py export report.csv --month 2026-11
+Four arithmetic operations with numeric input validation. **Python concepts:** Functions, loops and exception handling.
 
-# Run automated tests
-python -m unittest discover -s tests -v
-```
+Run `python beginner/calculator.py` from the repository root. [Source](beginner/calculator.py)
 
-#### 3. Secure Password Vault
-```bash
-cd python-intermediate-projects/Secure-Password-Vault
+![Simple Calculator terminal preview](assets/previews/beginner/calculator.png)
 
-# Install dependencies
-pip install -r requirements.txt
+### Number Guessing Game
 
-# Initialize a new vault with master password
-python main.py init
+Guess a number from 1 to 100 in up to ten tries, with higher/lower hints and scoring. **Python concepts:** Random numbers, conditionals and game state.
 
-# Generate a strong 32-character password
-python main.py generate --length 32
+Run `python beginner/number_guessing_game.py` from the repository root. [Source](beginner/number_guessing_game.py)
 
-# Add an entry and list entries
-python main.py add github
-python main.py list
+![Number Guessing Game terminal preview](assets/previews/beginner/number-guessing-game.png)
 
-# Run automated tests
-python -m unittest discover -s tests -v
-```
+### Rock Paper Scissors
 
-#### 4. Website Status Monitor
-```bash
-cd python-intermediate-projects/Website-Status-Monitor
+Play five rounds against the computer and see the running and final scores. **Python concepts:** Random choices, comparisons and score tracking.
 
-# Single health check for a website
-python main.py check https://example.com
+Run `python beginner/rock_paper_scissors.py` from the repository root. [Source](beginner/rock_paper_scissors.py)
 
-# Periodic monitoring (every 60s, 5 samples)
-python main.py monitor https://example.com --interval 60 --count 5
+![Rock Paper Scissors terminal preview](assets/previews/beginner/rock-paper-scissors.png)
 
-# View check history and uptime summary
-python main.py history
-python main.py summary
+### Password Generator
 
-# Export results to CSV
-python main.py export report.csv
+Choose a length and character sets, then see the generated password and its estimated strength. **Python concepts:** String handling and pseudorandom selection for a learning exercise.
 
-# Run automated tests
-python -m unittest discover -s tests -v
-```
+Run `python beginner/password_generator.py` from the repository root. [Source](beginner/password_generator.py)
 
-#### 5. Library Management System
-```bash
-cd python-intermediate-projects/Library-Management-System
+![Password Generator terminal preview](assets/previews/beginner/password-generator.png)
 
-# Add a book and a member
-python main.py add-book "Fluent Python" "Luciano Ramalho" 3
-python main.py add-member "Krushna Kale"
+### To-Do List Manager
 
-# Search catalog and issue a book (Book ID 1, Member ID 1, 14 days)
-python main.py books --search Python
-python main.py issue 1 1 --days 14
+Add, complete and delete tasks, clear completed items and save changes to `todos.json`. **Python concepts:** Classes, JSON persistence and CRUD operations.
 
-# View active loans, overdue items, and library stats
-python main.py loans
-python main.py overdue
-python main.py stats
+Run `python beginner/todo_list.py` from the repository root. [Source](beginner/todo_list.py)
 
-# Return a book (Loan ID 1)
-python main.py return 1
+![To-Do List Manager terminal preview](assets/previews/beginner/todo-list.png)
 
-# Run automated tests
-python -m unittest discover -s tests -v
-```
+## Intermediate projects
 
----
+### Smart File Organizer
 
-## 👨‍💻 Developer Information
+Sort files by extension with a dry-run preview, collision protection and an undo journal. Find exact duplicates with SHA-256. **Python concepts:** `argparse`, `pathlib`, hashing and operation journals.
 
-<div align="center">
+[Setup and commands](intermediate/smart-file-organizer/README.md) · [Source package](intermediate/smart-file-organizer/smart_file_organizer/) · [Sample output](intermediate/smart-file-organizer/examples/sample-output.txt)
 
-### **Krushna Kale**
-*Software Developer & Open Source Enthusiast*
+![Smart File Organizer terminal preview](assets/previews/intermediate/smart-file-organizer.png)
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/krushnakaale)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krushnakaale/)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/krushnakaale/)
+### Personal Expense Tracker
 
-</div>
+Track income and expenses in INR, set monthly budgets, review category summaries and export CSV reports. **Python concepts:** `Decimal` arithmetic, JSON and CSV.
 
----
+[Setup and commands](intermediate/personal-expense-tracker/README.md) · [Source package](intermediate/personal-expense-tracker/expense_tracker/) · [Sample output](intermediate/personal-expense-tracker/examples/sample-output.txt)
 
-## 🤝 Contributing
+![Personal Expense Tracker terminal preview](assets/previews/intermediate/personal-expense-tracker.png)
 
-Contributions, issues, and feature requests are welcome!
-1. Fork the Project (`gh repo fork krushnakaale/Python-Projects` or via GitHub web)
-2. Create your Feature Branch (`git checkout -b feature/NewProject`)
-3. Commit your Changes (`git commit -m 'Add awesome new project'`)
-4. Push to the Branch (`git push origin feature/NewProject`)
-5. Open a Pull Request
+### Secure Password Vault
 
----
+Demonstrate local credential management with a master password, masked prompts and encrypted storage. **Python concepts:** Scrypt key derivation and Fernet authenticated encryption.
 
-## 📄 License
+[Setup and commands](intermediate/secure-password-vault/README.md) · [Source package](intermediate/secure-password-vault/password_vault/) · [Sample output](intermediate/secure-password-vault/examples/sample-output.txt)
 
-This repository is distributed under the **MIT License**. See individual project directories for specific licenses where applicable.
+![Secure Password Vault terminal preview](assets/previews/intermediate/secure-password-vault.png)
+
+### Website Status Monitor
+
+Check HTTP(S) status and latency, review historical availability and export checks as CSV. **Python concepts:** `urllib`, timed polling and JSON Lines.
+
+[Setup and commands](intermediate/website-status-monitor/README.md) · [Source package](intermediate/website-status-monitor/website_monitor/) · [Sample output](intermediate/website-status-monitor/examples/sample-output.txt)
+
+![Website Status Monitor terminal preview](assets/previews/intermediate/website-status-monitor.png)
+
+### Library Management System
+
+Manage books and members, issue and return loans, and view overdue items and inventory statistics. **Python concepts:** SQLite, parameterized SQL and relational constraints.
+
+[Setup and commands](intermediate/library-management-system/README.md) · [Source package](intermediate/library-management-system/library_system/) · [Sample output](intermediate/library-management-system/examples/sample-output.txt)
+
+![Library Management System terminal preview](assets/previews/intermediate/library-management-system.png)
+
+## License
+
+The Smart File Organizer includes an [MIT license](intermediate/smart-file-organizer/LICENSE).
+
+## Developer
+
+**Krushna Kale** built this collection to explore Python through terminal apps, modular CLI design and automated testing.
+
+[GitHub](https://github.com/krushnakaale) · [LinkedIn](https://www.linkedin.com/in/krushnakaale/) · [Instagram](https://www.instagram.com/krushnakaale/)

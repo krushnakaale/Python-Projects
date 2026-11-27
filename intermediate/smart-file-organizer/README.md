@@ -18,7 +18,7 @@ A clean, cross-platform, command-line Python project that sorts files by extensi
 ## Folder structure
 
 ```text
-Smart-File-Organizer/
+smart-file-organizer/
 ├── main.py
 ├── smart_file_organizer/
 │   ├── __init__.py
@@ -38,7 +38,7 @@ Smart-File-Organizer/
 
 ```powershell
 py --version
-cd Smart-File-Organizer
+cd intermediate/smart-file-organizer
 py main.py --help
 py main.py organize "$env:USERPROFILE\Downloads" --dry-run
 py main.py organize "$env:USERPROFILE\Downloads"
@@ -54,7 +54,7 @@ If `py` is unavailable, try `python` instead.
 
 ```bash
 python3 --version
-cd Smart-File-Organizer
+cd intermediate/smart-file-organizer
 python3 main.py --help
 python3 main.py organize "$HOME/Downloads" --dry-run
 python3 main.py organize "$HOME/Downloads"

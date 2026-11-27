@@ -1,9 +1,9 @@
 # Personal Expense Tracker
 
-A standard-library Python CLI for tracking income, expenses and monthly budgets in INR. Project 02 of the Python Intermediate Projects series.
+A standard-library Python CLI for tracking income, expenses and monthly budgets in INR.
 
 ## Setup
-Install Python 3.10 or later, extract the project and open a terminal in its root. On Windows use `py`; on Kali Linux use `python3` in place of `py` below. No external dependencies are needed.
+Install Python 3.10 or later and open `intermediate/personal-expense-tracker` from the repository root. On Windows use `py`; on Kali Linux use `python3` in place of `py` below. No external dependencies are needed.
 
 ```sh
 py main.py --help
