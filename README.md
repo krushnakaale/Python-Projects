@@ -1,4 +1,6 @@
-# Python Projects
+# Python CLI Projects — Beginner to Intermediate
+
+Learn Python through ten command-line projects covering programming fundamentals, file automation, expense tracking and modular applications with unit tests.
 
 Ten Python command-line projects, from single-file exercises to modular applications with automated tests. This repository is the final collection.
 
