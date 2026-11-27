@@ -147,6 +147,16 @@ The Smart File Organizer includes an [MIT license](intermediate/smart-file-organ
 
 ## Developer
 
-**Krushna Kale** built this collection to explore Python through terminal apps, modular CLI design and automated testing.
+<div align="center">
 
-[GitHub](https://github.com/krushnakaale) · [LinkedIn](https://www.linkedin.com/in/krushnakaale/) · [Instagram](https://www.instagram.com/krushnakaale/)
+### Krushna Kale
+
+*Python developer and open-source enthusiast*
+
+I build practical command-line tools and use this collection to practice modular design, local data storage and automated testing.
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/krushnakaale)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logoColor=white)](https://www.linkedin.com/in/krushnakaale/)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/krushnakaale/)
+
+</div>
