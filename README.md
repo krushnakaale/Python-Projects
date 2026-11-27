@@ -2,6 +2,8 @@
 
 Ten Python command-line projects, from single-file exercises to modular applications with automated tests. This repository is the final collection.
 
+Each project image shows terminal output captured from a live run with demo inputs. The Website Status Monitor checks a local HTTP server.
+
 ## Project index
 
 | Beginner projects | Intermediate projects |
